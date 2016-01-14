@@ -20,7 +20,7 @@ public class Recursion {
 
 	/**
 	 * 负数阶乘无意义，超过16则超过int范围，int类型占用4个字节 一个字节8bit，所以值的个数为2^32，高一位为正负表示，
-	 * 原码表示范围-2^31----2^31,补码表示范围是-2^31--------2^31-1
+	 * 原码表示范围-2^31+1----2^31-1,补码表示范围是-2^31--------2^31-1
 	 * 
 	 * @param index
 	 * @return
@@ -34,8 +34,10 @@ public class Recursion {
 			return index * getResultByInt(index - 1);
 		}
 	}
+
 	/**
-	 * 	BigInteger存值个数(2^(2147483647*4*8-1))-1
+	 * BigInteger求阶乘
+	 * 
 	 * @param index
 	 * @return
 	 */
